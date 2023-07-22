@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, #009999, #404040);
+  background: linear-gradient(to bottom, #009999, #352f2f);
   color: white;
   text-align: center;
 }
@@ -15,16 +15,8 @@ body {
   height: 100%;
   background-color: #006666;
   z-index: 9999;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .content {
@@ -56,20 +48,23 @@ ul {
 }
 
 footer {
-  background: linear-gradient(to top, #009999, #404040);
-  padding: 20px;
+  background: color: #352f2f;
+  padding: 1px;
 }
 
 /* Podświetlenie tła przy najechaniu na link z telefonem */
 a:link[href^="tel"]::before {
   content: "\1F4DE";
-  margin-right: 5px;
+  margin-right: 35px;
 }
 
 /* Podświetlenie numeru telefonu na hover */
 a:hover[href^="tel"] {
   color: #ff0000;
 }
-.blockk {
-  height: 10px;
+
+
+.custom-text {
+  color: bisque;
+  font-size: 25px;
 }
