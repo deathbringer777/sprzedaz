@@ -1,148 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
-    <title>The basic language of the web: HTML</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chevrolet Kalos 2007</title>
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <meta charset="UTF-8" />
-  <link href="style.css" rel="stylesheet" />
   <body>
-    <!-- 
-    <h1>The basic language of the web: HTML</h1>
-    <h2>The basic language of the web: HTML</h2>
-    <h3>The basic language of the web: HTML</h3>
-    <h4>The basic language of the web: HTML</h4>
-    <h5>The basic language of the web: HTML</h5>
-    <h6>The basic language of the web: HTML</h6>
--->
-
-<div class="container"> 
-    <header class="main-header">
-      <h1>📘 The Code Magazine</h1>
-      <nav>
-        <!-- <strong>This is the navigation</strong> -->
-        <a href="blog.html">Blog</a>
-        <a href="#">Challenges</a>
-        <a href="#">Flexbox</a>
-        <a href="#">CSS Grid</a>
-      </nav>
-    </header>
-    <article>
-      <header class="post-header">
-        <h2>The Basic Language of the Web: HTML</h2>
-
-        <img
-          src="img/laura-jones.jpg"
-          alt="women face"
-          width="50"
-          height="50"
-        />
-
-        <p id="author">Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
-        <img
-          src="img/post-img.jpg"
-          alt="HTML cone on the screen"
-          width="500"
-          height="200"
-          class="post-img"
-
-        />
-        <button>❤️ Like</button>
-
+    <div class="loader"></div>
+    <div class="content">
+      <header>
+        <h1>Chevrolet Kalos 2007 🚗</h1>
       </header>
-      <p>
-        All modern websites and web applications are built using three
-        <em>fundamental</em> technologies: HTML, CSS and JavaScript. These are
-        the languages of the web.
-      </p>
-      <p>
-        In this post, let's focus on HTML. We will learn what HTML is all about,
-        and why you too should learn it.
-      </p>
+      <section class="block">
+        <h2>Opis auta</h2>
+        <p>
+          Sprzedam Chevroleta Kalos z 2007 roku. To 5-drzwiowy hatchback z
+          kondycją i radiem Bluetooth. Ma przebieg 200 tysięcy kilometrów i
+          instalację gazową LPG, która pozwala na pokonanie ponad 400 km na
+          pełnym baku.
+        </p>
+      </section>
 
-      <h3>What is HTML?</h3>
-      <p>
-        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
-        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
-        language that web developers use to structure and describe the content
-        of a webpage (not a programming language).
-      </p>
-      <p>
-        HTML consists of elements that describe different types of content:
-        paragraphs, links, headings, images, video, etc. Web browsers understand
-        HTML and render HTML code as websites.
-      </p>
-      <p>In HTML, each element is made up of 3 parts:</p>
+      <section class="block">
+        <h2>Dane techniczne</h2>
+        <ul>
+          <li>Pojemność silnika: 1.2 litra</li>
+          <li>Moc: 53 kW</li>
+          <li>Przebieg: 200 000 km</li>
+          <li>Typ paliwa: LPG</li>
+        </ul>
+      </section>
 
-      <ol>
-        <li class="first-li">The opening tag</li>
-        <li>The closing tag</li>
-        <li>The actual element</li>
-      </ol>
-      <p>
-        You can learn more at
-        <a href="https://developer.mozilla.org/ru/docs/Web/HTTP" target="_blank"
-          >MDN Web Docs</a
-        >.
-      </p>
+      <section class="block">
+        <h2>Do dokupienia</h2>
+        <p>
+          Do wymiany: pas klinowy generatora, sprężyna dźwigni zmiany biegów,
+          olej (koszt do 400 PLN). Cena: do negocjacji, 7000 zł.
+        </p>
+      </section>
 
-      <h3>Why should you learn HTML?</h3>
+      <section class="block">
+        <h2>Zdjęcia</h2>
+        <!-- Tu umieść galerię zdjęć -->
+      </section>
 
-      <p>
-        There are countless reasons for learning the fundamental language of the
-        web. Here are 5 of them:
-      </p>
+      <section class="block">
+        <h2>Kontakt</h2>
+        <p class="contact">
+          📞 Zadzwoń pod numer
+          <a href="tel:+48790804784">+48 790 804 784</a> aby umówić się na
+          spotkanie.
+        </p>
+      </section>
 
-      <ul>
-        <li class="first-li">To be able to use the fundamental web dev language</li>
-        <li>
-          To hand-craft beautiful websites instead of relying on tools like
-          Worpress or Wix
-        </li>
-        <li>To build web applications</li>
-        <li>To impress friends</li>
-        <li>To have fun 😃</li>
-      </ul>
-
-      <p>Hopefully you learned something new here. See you next time!</p>
-    </article>
-    <aside>
-      <h4>Related posts</h4>
-      <ul class="related">
-        <li>
-        <img
-          src="img/related-1.jpg"
-          alt="man with computer"
-          width="75"
-          height="75"
-        /> 
-        <a href="#">How to Learn Web Development</a>
-        <p class="related-author">By Jonas Schmedtmann</p>
-      </li>
-      <li>
-        <img
-          src="img/related-2.jpg"
-          alt="man with computer"
-          width="75"
-          height="75"
-        /> 
-        <a href="#">The Unknown Powers of CSS </a>
-        <p class="related-author">By Jim Dillon</p>
-      </li>
-      <li>
-        <img
-          src="img/related-3.jpg"
-          alt="man with computer"
-          width="75"
-          height="75"
-        /> 
-        <a href="#">Why JavaScript is Awesome</a>
-        <p class="related-author">By Matilda</p>
-      </li>
-    </aside>
-    <footer>
-      <p id="copyright">Copyright &copy; 2027 by The Code Magazine.
-      </p></footer>
+      <section class="blockk">
+        <footer>
+          <p>&copy; 2023 - Wszelkie prawa zastrzeżone.</p>
+        </footer>
+      </section>
     </div>
-  </body>
 
+    <script>
+      window.onload = function () {
+        const loader = document.querySelector(".loader");
+        const content = document.querySelector(".content");
+        loader.style.display = "none";
+        content.style.opacity = 1;
+      };
+    </script>
+  </body>
 </html>
