@@ -10,7 +10,7 @@
     <div class="loader"></div>
     <div class="content">
       <header>
-        <h1>Chevrolet Kalos 2007 🚗</h1>
+        <h1>Chevrolet Kalos 2007 🚙</h1>
       </header>
       <section class="block">
         <h2>Opis auta</h2>
@@ -20,6 +20,8 @@
           instalację gazową LPG, która pozwala na pokonanie ponad 400 km na
           pełnym baku.
         </p>
+
+        <p><b class="custom-text">Cena - do negocjacji: 7000 zł.</b></p>
       </section>
 
       <section class="block">
@@ -36,7 +38,7 @@
         <h2>Do dokupienia</h2>
         <p>
           Do wymiany: pas klinowy generatora, sprężyna dźwigni zmiany biegów,
-          olej (koszt do 400 PLN). Cena: do negocjacji, 7000 zł.
+          olej (koszt do 400 PLN).
         </p>
       </section>
 
@@ -48,25 +50,26 @@
       <section class="block">
         <h2>Kontakt</h2>
         <p class="contact">
-          📞 Zadzwoń pod numer
-          <a href="tel:+48790804784">+48 790 804 784</a> aby umówić się na
+          Zadzwoń pod numer -
+          <a href="tel:+48790804784">+48 790 804 784</a> - aby umówić się na
           spotkanie.
         </p>
       </section>
 
-      <section class="blockk">
-        <footer>
-          <p>&copy; 2023 - Wszelkie prawa zastrzeżone.</p>
-        </footer>
-      </section>
+      <footer>
+        <p>&copy; 2023 - Kyrylo Vdovin</p>
+      </footer>
     </div>
 
     <script>
       window.onload = function () {
         const loader = document.querySelector(".loader");
         const content = document.querySelector(".content");
-        loader.style.display = "none";
-        content.style.opacity = 1;
+        loader.style.opacity = 0;
+        setTimeout(function () {
+          loader.style.display = "none";
+          content.style.opacity = 3;
+        }, 1000); // Opóźnienie 1 sekunda
       };
     </script>
   </body>
