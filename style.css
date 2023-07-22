@@ -106,3 +106,75 @@ a:hover[href^="tel"] {
 .contact {
   font-size: larger;
 }
+
+.badanie {
+  font-style: italic;
+  color: rgb(246, 196, 134);
+  font-size: larger;
+}
+
+/* ... Ваши стили ... */
+
+.photo-scroll {
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  scroll-behavior: smooth; /* Добавлено плавное прокручивание */
+  -ms-overflow-style: none; /* Убираем полосу прокрутки в IE и Edge */
+  scrollbar-width: none; /* Убираем полосу прокрутки в Firefox */
+}
+
+.photo-container::-webkit-scrollbar {
+  display: none; /* Убираем полосу прокрутки в Chrome и Safari */
+}
+
+.photo-container img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #006666;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scroll-buttons {
+  position: bottom, center;
+  top: 70%;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.scroll-buttons button {
+  position: bottom;
+  background-color: rgba(175, 142, 82, 0.7);
+  border: #006666, 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ... Your other CSS styles ... */
+
+.scroll-left {
+  margin-right: 1px;
+}
+
+.scroll-right {
+  margin-left: 1px;
+}
+
+.full-image {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200%;
+  max-height: 200%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
