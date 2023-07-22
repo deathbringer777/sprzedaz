@@ -10,10 +10,10 @@
     <div class="loader"></div>
     <div class="content">
       <header>
-        <h1>Chevrolet Kalos 2007 🚙</h1>
+        <h1>🚙 &nbsp Chevrolet Kalos</h1>
       </header>
       <section class="block">
-        <h2>Opis auta</h2>
+        <h2>Opis:</h2>
         <p>
           Sprzedam ten urokliwy hatchback z 2007 roku, wyposażony w klimatyzację
           oraz radio z funkcją Bluetooth.
@@ -21,13 +21,18 @@
         <p>
           Samochód ma przebieg 200 tysięcy kilometrów i posiada instalację
           gazową LPG, która pozwala na pokonanie ponad 400 km na pełnym baku. To
-          niezawodne i ekonomiczne rozwiązanie!
+          dobre i ekonomiczne rozwiązanie!
         </p>
         <p><b class="custom-text">Cena - do negocjacji: 7000 zł.</b></p>
       </section>
 
+      <seection class="badanie"
+        <p>Badanie techniczne do: 27.12.2023</p>
+        <p>Data ważności polisy OC 09.07.2024</p>
+      </seection>
+
       <section class="block">
-        <h2>Dane techniczne</h2>
+        <h2>Dane techniczne:</h2>
         <ul>
           <li>Moc: 53 kW</li>
           <li>Kolor: Blekitny</li>
@@ -38,7 +43,7 @@
       </section>
 
       <section class="block">
-        <h2>Dane do sprawdzenia</h2>
+        <h2>Dane do sprawdzenia:</h2>
         <ul>
           <li>
             Numer Rejestracyjny:
@@ -90,8 +95,8 @@
         }
       </script>
       <section class="block">
-        <h2>Do dokupienia</h2>
-        <p>Ten samochód jest gotowy do jazdy i wymaga</p>
+        <h3>Do dokupienia:</h3>
+        <p></p>
         <p>
           Do wymiany: pas klinowy generatora, sprężyna dźwigni zmiany biegów,
           olej (koszt do 400 PLN).
@@ -99,20 +104,85 @@
       </section>
 
       <section class="block2">
-        <h2>Zdjęcia</h2>
-        <div class="gallery">
-          <img src="photo1.jpg" alt="Chevrolet Kalos 2007" />
-          <img src="photo2.jpg" alt="Chevrolet Kalos 2007" />
-
-          <!-- Добавьте еще теги <img> для каждого фото, которое хотите отобразить -->
+        <h2>Zdjęcia:</h2>
+        <div class="photo-scroll">
+          <div class="photo-container">
+            <img src="photo1.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img src="photo2.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img src="photo3.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img src="photo4.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img src="photo5.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img src="photo6.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img src="photo7.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <!-- Добавьте еще теги <img> для каждого фото, которое хотите отобразить -->
+          </div>
+          <div class="scroll-buttons">
+            <button class="scroll-left">◄</button>
+            <button class="scroll-right">►</button>
+          </div>
         </div>
-      </section>
+      </section>  
+      <script>
+        // ... Ваш предыдущий JavaScript код ...
+      
+        // Функция для открытия фотографии в полном размере
+        function openImage(src) {
+          const overlay = document.createElement("div");
+          overlay.classList.add("overlay");
+          overlay.addEventListener("click", () => {
+            overlay.remove();
+          });
+      
+          const img = document.createElement("img");
+          img.src = src;
+      
+          overlay.appendChild(img);
+          document.body.appendChild(overlay);
+        }
+      </script>
+
+<script>
+  // ... Your previous JavaScript code ...
+
+  // Функция для открытия фотографии в полном размере
+  function openImage(src) {
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    overlay.addEventListener("click", () => {
+      overlay.remove();
+    });
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("full-image"); // Add a class to the image for styling
+
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+  }
+</script>
+
+          
+      <script>
+        // Скрипт для прокрутки фотографий горизонтально
+        const container = document.querySelector(".photo-container");
+        const scrollRightButton = document.querySelector(".scroll-right");
+        const scrollLeftButton = document.querySelector(".scroll-left");
+      
+        scrollRightButton.addEventListener("click", () => {
+          container.scrollBy(200, 0);
+        });
+      
+        scrollLeftButton.addEventListener("click", () => {
+          container.scrollBy(-200, 0);
+        });
+      </script>
+      
 
       <p>&nbsp</p>
       <p>&nbsp</p>
 
       <section class="block">
-        <h2>Kontakt</h2>
+        <h2>Kontakt:</h2>
         <p class="contact">
           Zadzwoń pod numer -
           <a href="tel:+48790804784">+48 790 804 784</a> - aby umówić się na
@@ -137,9 +207,11 @@
         loader.style.opacity = 0;
         setTimeout(function () {
           loader.style.display = "none";
-          content.style.opacity = 2;
+          content.style.opacity = 1;
         }, 3000); // Opóźnienie 1 sekunda
       };
     </script>
+
   </body>
 </html>
+
