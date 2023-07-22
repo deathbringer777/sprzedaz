@@ -2,7 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, #009999, #352f2f);
+  background: linear-gradient(
+    to bottom,
+    #009999,
+    7%,
+    rgb(142, 126, 105),
+    #352f2f
+  );
   color: bisque;
   text-align: center;
   font-size: larger;
@@ -36,6 +42,7 @@ h1 {
 .block {
   padding: 40px 20px;
   text-align: center;
+  font-size: large;
 }
 
 h2 {
@@ -82,4 +89,20 @@ a:hover[href^="tel"] {
 }
 .fff:hover {
   color: #ff0000;
+}
+.block2 {
+  text-align: center;
+  width: auto;
+}
+
+.ffff:hover {
+  color: #ff0000;
+}
+.ffff {
+  color: rgb(245, 195, 130);
+  font-size: 150%;
+}
+
+.contact {
+  font-size: larger;
 }
