@@ -26,7 +26,7 @@
         <p><b class="custom-text">Cena - do negocjacji: 7000 zł.</b></p>
       </section>
 
-      <seection class="badanie"
+      <seection class="badanie">
         <p>Badanie techniczne do: 27.12.2023</p>
         <p>Data ważności polisy OC 09.07.2024</p>
       </seection>
@@ -107,76 +107,78 @@
         <h2>Zdjęcia:</h2>
         <div class="photo-scroll">
           <div class="photo-container">
-            <img src="photo1.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
-            <img src="photo2.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
-            <img src="photo3.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
-            <img src="photo4.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
-            <img src="photo5.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
-            <img src="photo6.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
-            <img src="photo7.jpg" alt="Chevrolet Kalos 2007" onclick="openImage(this.src)" />
+            <img
+              src="photo1.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo2.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo3.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo4.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo5.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo6.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo7.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
             <!-- Добавьте еще теги <img> для каждого фото, которое хотите отобразить -->
           </div>
-          <div class="scroll-buttons">
-            <button class="scroll-left">◄</button>
-            <button class="scroll-right">►</button>
-          </div>
         </div>
-      </section>  
+      </section>
+
+      <!-- ... Your previous HTML code ... -->
+
       <script>
-        // ... Ваш предыдущий JavaScript код ...
-      
-        // Функция для открытия фотографии в полном размере
         function openImage(src) {
           const overlay = document.createElement("div");
           overlay.classList.add("overlay");
           overlay.addEventListener("click", () => {
             overlay.remove();
           });
-      
+
           const img = document.createElement("img");
           img.src = src;
-      
+          img.classList.add("full-image"); // Add a class to the image for styling
+
           overlay.appendChild(img);
           document.body.appendChild(overlay);
         }
       </script>
 
-<script>
-  // ... Your previous JavaScript code ...
+      <!-- ... Your previous HTML code ... -->
 
-  // Функция для открытия фотографии в полном размере
-  function openImage(src) {
-    const overlay = document.createElement("div");
-    overlay.classList.add("overlay");
-    overlay.addEventListener("click", () => {
-      overlay.remove();
-    });
-
-    const img = document.createElement("img");
-    img.src = src;
-    img.classList.add("full-image"); // Add a class to the image for styling
-
-    overlay.appendChild(img);
-    document.body.appendChild(overlay);
-  }
-</script>
-
-          
       <script>
-        // Скрипт для прокрутки фотографий горизонтально
-        const container = document.querySelector(".photo-container");
-        const scrollRightButton = document.querySelector(".scroll-right");
-        const scrollLeftButton = document.querySelector(".scroll-left");
-      
-        scrollRightButton.addEventListener("click", () => {
-          container.scrollBy(200, 0);
-        });
-      
-        scrollLeftButton.addEventListener("click", () => {
-          container.scrollBy(-200, 0);
-        });
+        window.onload = function () {
+          const loader = document.querySelector(".loader");
+          const content = document.querySelector(".content");
+          loader.style.opacity = 0;
+          setTimeout(function () {
+            loader.style.display = "none";
+            content.style.opacity = 1;
+          }, 3000); // Opóźnienie 1 sekunda
+        };
       </script>
-      
 
       <p>&nbsp</p>
       <p>&nbsp</p>
@@ -189,6 +191,27 @@
           spotkanie.
         </p>
       </section>
+
+      <a href="#" class="scroll-to-top">Do Góry</a>
+      <script>
+        // Скрипт для кнопки "Наверх"
+        const scrollButton = document.querySelector(".scroll-to-top");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 200) {
+            scrollButton.style.display = "block";
+          } else {
+            scrollButton.style.display = "none";
+          }
+        });
+
+        scrollButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // Добавим плавную прокрутку к началу страницы
+          });
+        });
+      </script>
       <p>&nbsp</p>
       <p>&nbsp</p>
       <p>&nbsp</p>
@@ -199,19 +222,5 @@
         >
       </footer>
     </div>
-
-    <script>
-      window.onload = function () {
-        const loader = document.querySelector(".loader");
-        const content = document.querySelector(".content");
-        loader.style.opacity = 0;
-        setTimeout(function () {
-          loader.style.display = "none";
-          content.style.opacity = 1;
-        }, 3000); // Opóźnienie 1 sekunda
-      };
-    </script>
-
   </body>
 </html>
-
