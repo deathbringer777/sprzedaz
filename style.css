@@ -167,7 +167,7 @@ footer {
 .scroll-to-top {
   display: none; /* По умолчанию кнопка будет скрыта */
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   background-color: #006666;
   color: bisque;
