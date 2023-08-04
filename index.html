@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chevrolet Kalos 2007</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div class="content">
+      <header>
+        <h1>🚙 &nbsp Chevrolet Kalos</h1>
+      </header>
+      <section class="block">
+        <h2>Opis:</h2>
+        <p>
+          Sprzedam ten urokliwy hatchback z 2007 roku, wyposażony w klimatyzację
+          oraz radio z funkcją Bluetooth.
+        </p>
+        <p>
+          Samochód ma przebieg 197 tysięcy kilometrów i posiada instalację
+          gazową LPG, która pozwala na pokonanie ponad 400 km na pełnym baku. To
+          dobre i ekonomiczne rozwiązanie!
+        </p>
+        <p><b class="custom-text">Cena - do negocjacji: 7000 zł.</b></p>
+      </section>
+
+      <seection class="badanie">
+        <p>Badanie techniczne do: 27.12.2023</p>
+        <p>Data ważności polisy OC 09.07.2024</p>
+      </seection>
+
+      <section class="block">
+        <h2>Dane techniczne:</h2>
+        <ul>
+          <li>Moc: 53 kW</li>
+          <li>Kolor: Blekitny</li>
+          <li>Typ paliwa: LPG</li>
+          <li>Przebieg: 200 000 km</li>
+          <li>Pojemność silnika: 1.2 litra</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>Dane do sprawdzenia:</h2>
+        <ul>
+          <li>
+            Numer Rejestracyjny:
+            <span
+              onclick="copyText('WY648XM')"
+              style="text-decoration: underline; cursor: pointer"
+              >WY648XM</span
+            >
+          </li>
+          <li>
+            Numer VIN:
+            <span
+              onclick="copyText('KL1SF48TJ7B685835')"
+              style="text-decoration: underline; cursor: pointer"
+              >KL1SF48TJ7B685835</span
+            >
+          </li>
+          <li>
+            Data Pierwszej Rejestracji:
+            <span
+              onclick="copyText('10.08.2006')"
+              style="text-decoration: underline; cursor: pointer"
+              >10.08.2006</span
+            >
+          </li>
+          <p>&nbsp</p>
+
+          <li>
+            <a
+              class="ffff"
+              href="https://historiapojazdu.gov.pl/"
+              target="_blank"
+              >SPRAWDŹ</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <script>
+        function copyText(text) {
+          var tempInput = document.createElement("input");
+          tempInput.setAttribute("type", "text");
+          tempInput.setAttribute("value", text);
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand("copy");
+          document.body.removeChild(tempInput);
+          alert("Copied the text: " + text);
+        }
+      </script>
+      <section class="block">
+        <h3>Do dokupienia:</h3>
+        <p></p>
+        <p>
+          Do wymiany: pas klinowy generatora, sprężyna dźwigni zmiany biegów,
+          olej (koszt do 400 PLN).
+        </p>
+      </section>
+
+      <section class="block2">
+        <h2>Zdjęcia:</h2>
+        <div class="photo-scroll">
+          <div class="photo-container">
+            <img
+              src="photo1.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo2.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo3.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo4.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo5.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo6.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <img
+              src="photo7.jpg"
+              alt="Chevrolet Kalos 2007"
+              onclick="openImage(this.src)"
+            />
+            <!-- Добавьте еще теги <img> для каждого фото, которое хотите отобразить -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ... Your previous HTML code ... -->
+
+      <script>
+        function openImage(src) {
+          const overlay = document.createElement("div");
+          overlay.classList.add("overlay");
+          overlay.addEventListener("click", () => {
+            overlay.remove();
+          });
+
+          const img = document.createElement("img");
+          img.src = src;
+          img.classList.add("full-image"); // Add a class to the image for styling
+
+          overlay.appendChild(img);
+          document.body.appendChild(overlay);
+        }
+      </script>
+
+      <!-- ... Your previous HTML code ... -->
+
+      <script>
+        window.onload = function () {
+          const loader = document.querySelector(".loader");
+          const content = document.querySelector(".content");
+          loader.style.opacity = 0;
+          setTimeout(function () {
+            loader.style.display = "none";
+            content.style.opacity = 1;
+          }, 3000); // Opóźnienie 1 sekunda
+        };
+      </script>
+
+      <p>&nbsp</p>
+      <p>&nbsp</p>
+
+      <section class="block">
+        <h2>Kontakt:</h2>
+        <p class="contact">
+          Zadzwoń pod numer -
+          <a href="tel:+48790804784">+48 790 804 784</a> - aby umówić się na
+          spotkanie.
+        </p>
+      </section>
+
+      <a href="#" class="scroll-to-top">Do Góry</a>
+      <script>
+        // Скрипт для кнопки "Наверх"
+        const scrollButton = document.querySelector(".scroll-to-top");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 500) {
+            scrollButton.style.display = "block";
+          } else {
+            scrollButton.style.display = "none";
+          }
+        });
+
+        scrollButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // Добавим плавную прокрутку к началу страницы
+          });
+        });
+      </script>
+      <p>&nbsp</p>
+      <p>&nbsp</p>
+      <p>&nbsp</p>
+
+      <footer>
+        <a class="fff" href="https://deathbringer777.github.io/landing/"
+          >&copy; 2023 - Kyrylo Vdovin</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
